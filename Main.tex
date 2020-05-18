@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{units}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{nicefrac}
+\usepackage{hyperref}
+\usepackage{bbm}
+\usepackage{color}
+\usepackage{tensor}
+\usepackage{tipa}
+\usepackage{bussproofs}
+\usepackage{ stmaryrd }
+\usepackage{ textcomp }
+\usepackage{leftidx}
+\usepackage{afterpage}
+\usepackage{varwidth}
+
+\newcommand\blankpage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage
+    }
+
+%\graphicspath{ {images/} }
+
+\newtheorem{thm}{Theorem}
+\numberwithin{thm}{subsection}
+\newtheorem{defn}{Definition}
+\numberwithin{defn}{subsection}
+\newtheorem{lemma}{Lemma}
+\numberwithin{lemma}{subsection}
+\newtheorem{example}{Example}
+\numberwithin{example}{subsection}
+\newtheorem{notation}{Notation}
+\numberwithin{notation}{subsection}
+\newtheorem{cor}{Corollary}
+\numberwithin{cor}{subsection}
+\newtheorem{remark}{Remark}
+\numberwithin{remark}{subsection}
+\newtheorem{condition}{Condition}
+\numberwithin{condition}{subsection}
+\newtheorem{question}{Question}
+\numberwithin{question}{subsection}
+\newtheorem{algorithm}{Algorithm}
+\numberwithin{question}{subsection}
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\scr}[1]{\mathscr{#1}}
+\newcommand{\call}[1]{\mathcal{#1}}
+\newcommand{\psheaf}{\text{\underline{Set}}^{\scr{C}^{\text{op}}}}
+\newcommand{\und}[1]{\underline{\hspace{#1 cm}}}
+\newcommand{\adj}[1]{\text{\textopencorner}{#1}\text{\textcorner}}
+\newcommand{\comment}[1]{}
+
+\usepackage[margin=1cm]{geometry}
+
+\title{Open Curry-Howard}
+\author{Will Troiani}
+\date{October 2019}
+
+\begin{document}
+ \section{Introduction}
+ \input{Introduction.tex}
+ 
+ \begin{thebibliography}{9}
+ \bibitem{Mazzola} G. Mazzola, \emph{The Topos of Music I, Theory}, Springer International Publishing AG, part of Springer Nature 2002,2017.
+ 
+ \bibitem{MurfetTroiani} D. Murfet, W. Troiani, \emph{The Curry-Howard Correspondence}
+ \end{thebibliography}
+ 
+ 
+
+\end{document}
