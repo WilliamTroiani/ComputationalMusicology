@@ -1,0 +1,30 @@
+The following Definitions are particular instances of the extremely general formulations of those in \cite{Mazzola} which carry the same name. The full generality is avoided here due to our underlying agenda: to relate musical composition to computation. The indications of such a relationship described in the Introduction encourage us to look toward \emph{global compositions}, which consist of a collection of particular \emph{local compositions}, satisfying suitable compatibility conditions. Our approach avoids the full generality of \emph{forms} and avoids \emph{denotators} completely, which greatly reduces the work needed to arrive at \emph{global compositions}.\\\\
+%
+First we Define \emph{forms}, we differ from Mazzola's confusing presentation ``recursive Definition'' and provide an inductive one instead, throughout rings are assumed to be commutative with unit.
+\begin{defn}
+ The set of \textbf{simple forms} $\scr{F}$ consists of tuples $(N(F),T(F),C(F),I(F))$ where
+ \begin{itemize}
+  \item the \textbf{name} $N(F)$ is a word in $\operatorname{ASCII}^\ast$,
+  \item the \textbf{type} $T(F)$ is the word $\operatorname{Simple} \in \operatorname{ASCII}^\ast$,
+  \item the \textbf{coordinator} is a ring $R$ along with an $R$-module $M$,
+  \item the \textbf{identifier} $I(F)$ is a presheaf $S: \underline{Modd}^{\text{op}} \to \underline{Set}$ along with a monic $S \rightarrowtail \underline{Modd}(\und{0.2},M)$.
+ \end{itemize}
+ We now define \textbf{compound forms}, let $i > 0$ and $N(F) \in \operatorname{ASCII}^\ast$,
+ \begin{itemize}
+  \item if $(F' = N(F'), T(F'), C(F'), I(F')) \in \scr{F}_{i - 1}$, then
+  \begin{itemize}
+   \item if $I(F): X \to \operatorname{Dom}I(F')$ is some monic of functors, then $F = (N(F), \operatorname{Syn}, F', I(F)) \in \scr{F}_{i}$, we say $F$ has type \textbf{synonym},
+   \item if $I(F): X \to \Omega^{\operatorname{Dom}I(F')}$ is some monic of functors, then $F = (N(F), \operatorname{power}, F', I(F)) \in \scr{F}_i$, we say $F$ has type \textbf{Power}
+  \end{itemize}
+    \item given a diagram $D: \scr{J} \to \underline{Set}^{\underline{Modd}^{op}}$ and a $\scr{J}$-indexed collection $\lbrace F_j: (N(F_j),T(F_j), C(F_j), I(F_j))\rbrace_{j \in J}$ where $F_j \in \scr{F}_{i-1}$ and $D(j) = \operatorname{Dom}I(F_j)$ then
+    \begin{itemize}
+     \item $F = (N(F), \operatorname{Limit}, D, \operatorname{Limit}_{D}\scr{J}) \in \scr{F}_j$, we say $F$ has type \textbf{limit}, and
+     \item $F = (N(F), \operatorname{Colimit}, D, \operatorname{Colimit}_D\scr{J}) \in \scr{F}_j$, we say $F$ has type \textbf{colimit}.
+    \end{itemize}
+ \end{itemize}
+As with simple forms, the \textbf{name} of a compound form $F = (N(F), T(F), C(F), I(F))$ is $N(F)$, etc.
+\end{defn}
+\begin{example}
+ \textcolor{red}{Give the OP example}
+\end{example}
+\textcolor{red}{Note: there is an order on the local compositions corresponding to a global composition. It is ``left first, followed by inner first", this order pescribes a simplicial set whose geometric realisation is the nerve that Mazzola defines.}
